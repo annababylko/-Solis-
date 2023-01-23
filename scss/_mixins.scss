@@ -1,0 +1,57 @@
+@mixin btnStyle ($width, $height){
+    background: transparent;
+    text-transform: uppercase;
+    color: $color-text-btn;
+    font-size: 1.111rem;
+    border: none;
+    font-weight: 700;
+    position: relative;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    &::before{
+        position: absolute;
+        content: '';
+        top: 49.83%;
+        left: 10.2%;
+        width: 100%;
+        height: 13px;
+        background: #F1897B;
+        opacity: 0.3;
+    }
+    &:hover{
+        color: #E54F3A;
+        &:hover::before{
+            background: #E54F3A;
+        }
+    }
+}
+
+@mixin btnStyleDark ($width, $height){
+    background: transparent;
+    text-transform: uppercase;
+    color: #53F3CD;
+    font-size: 1.111rem;
+    border: none;
+    font-weight: 700;
+    position: relative;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    &::before{
+        position: absolute;
+        content: '';
+        top: 49.83%;
+        left: 10.2%;
+        width: 100%;
+        height: 13px;
+        background: #53F3CD;
+        opacity: 0.3;
+    }
+    &:hover{
+        color: #02E0AB;
+        &:hover::before{
+            background: #02E0AB;
+        }
+    }
+}
